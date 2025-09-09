@@ -13,11 +13,13 @@ import './chp04/Button.css'
 import './chp04/ConfirmDialog.css'
 import Clock from "./chp04/Clock";
 import './chp04/Clock.css'
+import Comment from './chp05/exam01/Comment.jsx';
+import BookList from './chp05/exam02/BookList.jsx';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 setInterval(()=>{
     root.render(
         <React.StrictMode>
-            <Clock /> {/* 👈 2. App 대신 Library를 보여주도록 변경 */}
+            <BookList /> {/* 👈 2. App 대신 Library를 보여주도록 변경 */}
         </React.StrictMode>
     );
 
