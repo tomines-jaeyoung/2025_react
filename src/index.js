@@ -1,30 +1,40 @@
-// index.js
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App'; // App은 이제 사용하지 않으므로 주석 처리하거나 지워도 됩니다.
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Library from './chp03/Library.jsx'; // 👈 1. Library.jsx 파일에서 Library 컴포넌트 가져오기
-import './chp03/book.css';
-import ConfirmDialogs from "./chp04/ConfirmDialogs";
+
+import Library from "./chp03/Library";
+// import './chp03/book.css'
 import ConfirmDialog from "./chp04/ConfirmDialog";
 import './chp04/Button.css'
 import './chp04/ConfirmDialog.css'
+import ConfirmDialogs from "./chp04/ConfirmDialogs";
 import Clock from "./chp04/Clock";
-import './chp04/Clock.css'
-import Comment from './chp05/exam01/Comment.jsx';
-import BookList from './chp05/exam02/BookList.jsx';
+// import './chp04/Clock.css'
+import Comment from "./chp05/exam01/Comment";
+import BookList from "./chp05/exam02/BookList";
+import CommentList from "./chp05/CommentList";
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-setInterval(()=>{
-    root.render(
-        <React.StrictMode>
-            <BookList /> {/* 👈 2. App 대신 Library를 보여주도록 변경 */}
-        </React.StrictMode>
-    );
 
-}, 1000)
+root.render(
+    <React.StrictMode>
+        <CommentList/>
+    </React.StrictMode>
+);
+
+// setInterval(()=>{
+//     root.render(
+//         <React.StrictMode>
+//             <Clock />
+//         </React.StrictMode>
+//     );
+// }, 1000)
 
 
-
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
