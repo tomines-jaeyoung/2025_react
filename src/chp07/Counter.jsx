@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Counter() {
     // useState Hook을 사용하여 count 상태와 이를 업데이트하는 setCount 함수를 선언합니다.
     const [count, setCount] = useState(0);
-
+useEffect(()=>{
+    document.title = `총 ${count}번 클릭했습니다.`;
+})
 
     return (
         <div>
