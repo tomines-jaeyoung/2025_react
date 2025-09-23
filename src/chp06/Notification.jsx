@@ -1,17 +1,17 @@
 import React from "react";
 import "./Notification.css"
 
-class Notification extends React.Componet{
+class Notification extends React.Component{
     constructor(props) {
         super(props);
-this.state = {};
+        this.state = {};
     }
-render(){
+    render(){
         return(
-            <div className={"wrapper"}>
+            <div className={"wrapper1"}>
                 <span className={"messageText"}>{this.props.message}</span>
             </div>
         );
-}
+    }
 }
 export default Notification;

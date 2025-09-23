@@ -7,21 +7,24 @@ import reportWebVitals from './reportWebVitals';
 import Library from "./chp03/Library";
 // import './chp03/book.css'
 import ConfirmDialog from "./chp04/ConfirmDialog";
-import './chp04/Button.css'
-import './chp04/ConfirmDialog.css'
+// import './chp04/Button.css'
+// import './chp04/ConfirmDialog.css'
 import ConfirmDialogs from "./chp04/ConfirmDialogs";
 import Clock from "./chp04/Clock";
 // import './chp04/Clock.css'
 import Comment from "./chp05/exam01/Comment";
 import BookList from "./chp05/exam02/BookList";
 import CommentList from "./chp05/CommentList";
+import Notification from "./chp06/Notification";
+import NotificationList  from "./chp06/NotificationList";
+import Counter from "./chp07/Counter";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <CommentList/>
+        <Counter/>
     </React.StrictMode>
 );
 
