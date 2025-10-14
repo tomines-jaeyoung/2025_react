@@ -24,13 +24,14 @@ import Toggle_3_NewSyntax from "./chp08/Toggle_3_NewSyntax";
 import ToggleFunction from "./chp08/ToggleFunction";
 import MyButton_Argument from "./chp08/MyButton_Argument";
 import InputTest from "./chp08/InputTest";
-
+import Greeting from './chp09/ex1/UserGreeting'
+import LoginControl from "./chp09/ex2/LoginControl";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <InputTest/>
+        <LoginControl/>
     </React.StrictMode>
 );
 
