@@ -27,7 +27,7 @@ function CommentList() {
             {
                 comments.map((comment) => {
                         return(
-                            <Comment name={comment.name} comment={comment.comment} url={comment.url}/>
+                            <Comment name={comment.name} comment={comment.comment} gtdgfdgrd={comment.url}/>
                         );
                     }
                 )

@@ -27,11 +27,15 @@ import InputTest from "./chp08/InputTest";
 import Greeting from './chp09/ex1/UserGreeting'
 import LoginControl from "./chp09/ex2/LoginControl";
 
+import App2 from "./practice/App2";
+import NewCommentList from "./chp05/gongbu/NewCommentList";
+import KoreaPresidents from "./chp10/ex4/KoreaPresidents";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <LoginControl/>
+        <KoreaPresidents />
     </React.StrictMode>
 );
 
