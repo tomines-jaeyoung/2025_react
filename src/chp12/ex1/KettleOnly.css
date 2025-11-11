@@ -1,0 +1,125 @@
+/* KettleOnly.css */
+
+/* --- 1. 주전자/버너 컨테이너 (fieldset) 스타일 --- */
+fieldset {
+    /* 버너 상판 모양 */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    padding: 30px 20px 40px 20px;
+    border: none;
+    border-radius: 10px 10px 60% 60%;
+    background-color: #d3d3d3; /* 버너 색상 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+}
+
+/* 버너의 아랫부분 (fieldset의 ::after로 표현) */
+fieldset::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    width: 150px;
+    height: 30px;
+    background-color: #a9a9a9;
+    border-radius: 0 0 10px 10px;
+}
+
+/* --- 2. 주전자 뚜껑/손잡이 (legend) 스타일 --- */
+legend {
+    position: absolute;
+    top: -40px;
+    /* 뚜껑 모양을 위한 스타일 */
+    background-color: #f08080; /* 빨간 뚜껑 */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.9em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* --- 3. 주전자 몸통 (input) 스타일 --- */
+input[type="text"], input:not([type]) { /* 기본 input 스타일 적용 */
+    /* 주전자 몸통 모양을 위한 스타일 */
+    width: 85%;
+    height: 70px;
+    border: 3px solid #696969;
+    border-radius: 35px; /* 둥근 주전자 몸통 */
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #444;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    transition: all 0.5s;
+    outline: none;
+}
+
+/* --- 4. 끓는 느낌 애니메이션 (조건부) --- */
+
+/* **[주요 트릭]** Input에 포커스가 갔을 때 (사용자가 온도를 입력할 때)
+   주전자 (fieldset)에 끓는 효과 적용 */
+fieldset:focus-within::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 180px;
+    /* 불꽃 그라데이션 */
+    background: radial-gradient(circle, #ffeb3b 0%, #ff5722 50%, transparent 70%);
+    opacity: 0.8;
+    border-radius: 50%;
+    z-index: 1;
+    animation: flame-flicker 0.2s infinite alternate;
+}
+
+/* 주전자 뚜껑 (legend) 옆에 증기 효과 (fieldset의 ::after가 이미 사용되었으므로,
+   이모지를 직접 활용하여 시각적으로 끓는 상태 표현) */
+legend::after {
+    content: "💨"; /* 증기 이모지 */
+    position: absolute;
+    top: -50px; /* 뚜껑 위로 올림 */
+    right: 5px;
+    font-size: 2.5em;
+    opacity: 0;
+    /* 기본적으로 숨김 */
+}
+
+/* input에 포커스가 갔을 때 (끓는 것으로 간주) 증기 애니메이션 시작 */
+fieldset:focus-within > legend::after {
+    animation: steam-up 2s infinite ease-out;
+}
+
+/* --- 5. 애니메이션 정의 --- */
+
+@keyframes steam-up {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-50px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes flame-flicker {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.98);
+        opacity: 0.9;
+    }
+}

@@ -1,0 +1,126 @@
+/*
+ * Reservation.css
+ */
+
+/* 폼 전체 스타일링 */
+.Reservation-form {
+    /* 어두운 배경 */
+    background: #1a1a2e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* 깊이감 있는 그림자 */
+    max-width: 400px;
+    margin: 50px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e94560; /* 메인 네온 컬러 */
+    border: 1px solid #e9456044;
+}
+
+/* 라벨 스타일링 */
+label {
+    display: flex; /* Flex를 사용하여 항목 정렬 */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #ff99e8; /* 호버 시 색상 변경 */
+}
+
+/* 일반 텍스트 및 숫자 입력 필드 스타일링 */
+input[type="number"] {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #2c2c44;
+    color: #ffffff;
+    font-size: 1em;
+    /* 네온 효과를 위한 그림자 */
+    box-shadow: 0 0 5px #e94560, 0 0 10px #e9456088;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    /* 포커스 시 네온 효과 강조 */
+    box-shadow: 0 0 10px #ff99e8, 0 0 20px #ff99e8aa;
+    background: #3a3a5a;
+}
+
+/* 체크박스 스타일링 */
+input[type="checkbox"] {
+    /* 기본 모양 숨기기 */
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e94560;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+/* 체크박스 - 체크 안된 상태 */
+input[type="checkbox"]:hover {
+    border-color: #ff99e8;
+    box-shadow: 0 0 5px #ff99e8;
+}
+
+/* 체크박스 - 체크된 상태 (신기한 효과!) */
+input[type="checkbox"]:checked {
+    background-color: #e94560;
+    border-color: #e94560;
+    /* 체크 시 그림자 확산 */
+    box-shadow: 0 0 8px #e94560, 0 0 15px #e94560aa;
+}
+
+/* 체크박스 - 체크 마크 생성 */
+input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* 제출 버튼 스타일링 */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    /* 초기 네온 스타일 */
+    background: #e94560;
+    color: #1a1a2e;
+    text-shadow: 0 0 5px #ffffff;
+    box-shadow: 0 0 5px #e94560, 0 0 15px #e94560, 0 0 30px #e94560;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* 부드럽고 신기한 전환 효과 */
+    letter-spacing: 1px;
+}
+
+/* 제출 버튼 - 호버 시 신기한 효과 극대화 */
+button[type="submit"]:hover {
+    background: #ff99e8;
+    color: #1a1a2e;
+    /* 네온 그림자 변경 */
+    box-shadow: 0 0 10px #ff99e8, 0 0 25px #ff99e8, 0 0 50px #ff99e8, 0 0 100px #ff99e8;
+    transform: translateY(-3px); /* 약간 띄우는 효과 */
+}
+
+/* 줄바꿈 간격 조정 */
+br {
+    display: none; /* br 태그를 숨기고 label의 margin으로 간격 처리 */
+}
