@@ -7,12 +7,13 @@ import reportWebVitals from './reportWebVitals';
 
 import './chp12/ex1/KettleOnly.css'
 import ConfirmBoilBerdict from "./chp12/ex1/ConfirmBoilBerdict";
+import DistanceConverter from "./chp12/ex2/DistanceConverter";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <ConfirmBoilBerdict />
+        <DistanceConverter />y
     </React.StrictMode>
 );
 
