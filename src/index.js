@@ -8,12 +8,14 @@ import reportWebVitals from './reportWebVitals';
 import './chp12/ex1/KettleOnly.css'
 import ConfirmBoilBerdict from "./chp12/ex1/ConfirmBoilBerdict";
 import DistanceConverter from "./chp12/ex2/DistanceConverter";
+import Calculator from "./chp12/ex2_1/Calculator";
+import Specialization from "./chp12/ex3/Specialization";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <DistanceConverter />y
+        <Specialization />
     </React.StrictMode>
 );
 
