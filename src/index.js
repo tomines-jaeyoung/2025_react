@@ -3,19 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Blocks from "./chp15/Blocks";
 
 
-import './chp12/ex1/KettleOnly.css'
-import ConfirmBoilBerdict from "./chp12/ex1/ConfirmBoilBerdict";
-import DistanceConverter from "./chp12/ex2/DistanceConverter";
-import Calculator from "./chp12/ex2_1/Calculator";
-import Specialization from "./chp12/ex3/Specialization";
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <Specialization />
+        <Blocks/>
     </React.StrictMode>
 );
 
